@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Travel Agency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #023e8a;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .featured {
+            padding: 20px;
+            text-align: center;
+        }
+        .featured h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .featured p {
+            font-size: 1.2em;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .booking-form {
+            background-color: #caf0f8;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .booking-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .booking-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .booking-form input, .booking-form select, .booking-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .booking-form button {
+            background-color: #0077b6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .booking-form button:hover {
+            background-color: #023e8a;
+        }
+        footer {
+            background-color: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adventure Travel Agency</h1>
+    </header>
+    <nav>
+        <a href="#featured">Featured Destinations</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Book Now</a>
+    </nav>
+    <section id="featured" class="featured">
+        <h2>Featured Destinations</h2>
+        <p>Explore the most exciting destinations around the world. From tropical beaches to snowy mountains, we have it all!</p>
+    </section>
+    <section id="gallery" class="gallery">
+        <img src="destination1.jpg" alt="Destination 1">
+        <img src="destination2.jpg" alt="Destination 2">
+        <img src="destination3.jpg" alt="Destination 3">
+        <img src="destination4.jpg" alt="Destination 4">
+    </section>
+    <section id="booking" class="booking-form">
+        <h2>Book Your Adventure</h2>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="destination">Destination</label>
+            <select id="destination" name="destination" required>
+                <option value="beach">Tropical Beach</option>
+                <option value="mountains">Snowy Mountains</option>
+                <option value="city">City Adventure</option>
+                <option value="forest">Rainforest Trek</option>
+            </select>
+            
+            <label for="message">Additional Requests</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 Adventure Travel Agency. All rights reserved.</p>
+    </footer>
+</body>
+</html>
