@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0077b5;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .companies, .job-details {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .company-list button {
+            background-color: #0077b5;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .job-details {
+            display: none;
+        }
+
+        .search-features {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #0077b5;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showJobDetails(company) {
+            document.getElementById("job-info").innerHTML = 
+            company === "Google" ? "<h2>Google Job Openings</h2><p>Data Analyst - 5 vacancies</p><p>Full Stack Developer - 7 vacancies</p><p>AWS Engineer - 4 vacancies</p>"
+            : company === "Amazon" ? "<h2>Amazon Job Openings</h2><p>Data Analyst - 3 vacancies</p><p>Full Stack Developer - 6 vacancies</p><p>AWS Engineer - 5 vacancies</p>"
+            : "<h2>Microsoft Job Openings</h2><p>Data Analyst - 4 vacancies</p><p>Full Stack Developer - 5 vacancies</p><p>AWS Engineer - 6 vacancies</p>";
+            
+            document.getElementById("job-details").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Student Job Search Portal</h1>
+    </header>
+
+    <section class="companies">
+        <h2>Explore Companies</h2>
+        <div class="company-list">
+            <button onclick="showJobDetails('Google')">Google</button>
+            <button onclick="showJobDetails('Amazon')">Amazon</button>
+            <button onclick="showJobDetails('Microsoft')">Microsoft</button>
+        </div>
+    </section>
+
+    <section class="job-details" id="job-details">
+        <div id="job-info"></div>
+    </section>
+
+    <section class="search-features">
+        <h2>Job Search Features for Students</h2>
+        <ul>
+            <li>Apply for jobs directly</li>
+            <li>Upload Resume</li>
+            <li>Get personalized job recommendations</li>
+            <li>Connect with professionals</li>
+            <li>Receive interview tips & guidance</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Student Job Portal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

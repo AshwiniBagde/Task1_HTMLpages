@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Institutes in Nagpur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0077b5;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .institutes, .details {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .institute-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .institute-list button {
+            background-color: #0077b5;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .details {
+            display: none;
+        }
+
+        footer {
+            background-color: #0077b5;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showDetails(institute) {
+            let details = {
+                "ABC Data Institute": "<h2>ABC Data Institute</h2><p>Courses: Python, SQL, Data Visualization</p><p>Timings: 10 AM - 6 PM</p><p>Fees: ₹40,000</p><p>Address: ABC Plaza, Nagpur</p><p>Selection: Aptitude Test + Interview</p>",
+                "XYZ Analytics Academy": "<h2>XYZ Analytics Academy</h2><p>Courses: Machine Learning, Big Data, Excel</p><p>Timings: 9 AM - 5 PM</p><p>Fees: ₹45,000</p><p>Address: XYZ Tower, Nagpur</p><p>Selection: Online Test + Project Submission</p>",
+                "Data Vision Nagpur": "<h2>Data Vision Nagpur</h2><p>Courses: Power BI, Tableau, Python</p><p>Timings: 11 AM - 7 PM</p><p>Fees: ₹38,000</p><p>Address: Central Mall, Nagpur</p><p>Selection: Application Review + Interview</p>",
+                "Nagpur Data Academy": "<h2>Nagpur Data Academy</h2><p>Courses: Data Wrangling, AI Tools, Cloud Computing</p><p>Timings: 8 AM - 4 PM</p><p>Fees: ₹50,000</p><p>Address: IT Park, Nagpur</p><p>Selection: Hackathon Participation</p>",
+                "TechEdge Institute": "<h2>TechEdge Institute</h2><p>Courses: SQL, Python, AI</p><p>Timings: 2 PM - 9 PM</p><p>Fees: ₹42,000</p><p>Address: City Square, Nagpur</p><p>Selection: Portfolio Review</p>",
+                "DataMasters Nagpur": "<h2>DataMasters Nagpur</h2><p>Courses: Cloud Data, Web Scraping, Power BI</p><p>Timings: 10 AM - 5 PM</p><p>Fees: ₹35,000</p><p>Address: Cyber Hub, Nagpur</p><p>Selection: Assignment Review</p>",
+                "AI Data School": "<h2>AI Data School</h2><p>Courses: Data Science, R, Statistics</p><p>Timings: 1 PM - 8 PM</p><p>Fees: ₹48,000</p><p>Address: Knowledge Park, Nagpur</p><p>Selection: Interview + Coding Test</p>",
+                "Elite Data Hub": "<h2>Elite Data Hub</h2><p>Courses: Database Management, ETL Tools, ML</p><p>Timings: 3 PM - 10 PM</p><p>Fees: ₹55,000</p><p>Address: Elite Towers, Nagpur</p><p>Selection: Merit-Based Screening</p>",
+                "DataQuest Nagpur": "<h2>DataQuest Nagpur</h2><p>Courses: Python, Excel, BI Tools</p><p>Timings: 12 PM - 7 PM</p><p>Fees: ₹39,000</p><p>Address: Downtown Plaza, Nagpur</p><p>Selection: Certification Review</p>",
+                "Insight Analytics Institute": "<h2>Insight Analytics Institute</h2><p>Courses: Deep Learning, Neural Networks, SQL</p><p>Timings: 10 AM - 6 PM</p><p>Fees: ₹52,000</p><p>Address: Tech Village, Nagpur</p><p>Selection: Exam + Personal Interview</p>"
+            };
+
+            document.getElementById("details").innerHTML = details[institute];
+            document.getElementById("details").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Data Analyst Institutes in Nagpur</h1>
+    </header>
+
+    <section class="institutes">
+        <h2>Select an Institute</h2>
+        <div class="institute-list">
+            <button onclick="showDetails('ABC Data Institute')">ABC Data Institute</button>
+            <button onclick="showDetails('XYZ Analytics Academy')">XYZ Analytics Academy</button>
+            <button onclick="showDetails('Data Vision Nagpur')">Data Vision Nagpur</button>
+            <button onclick="showDetails('Nagpur Data Academy')">Nagpur Data Academy</button>
+            <button onclick="showDetails('TechEdge Institute')">TechEdge Institute</button>
+            <button onclick="showDetails('DataMasters Nagpur')">DataMasters Nagpur</button>
+            <button onclick="showDetails('AI Data School')">AI Data School</button>
+            <button onclick="showDetails('Elite Data Hub')">Elite Data Hub</button>
+            <button onclick="showDetails('DataQuest Nagpur')">DataQuest Nagpur</button>
+            <button onclick="showDetails('Insight Analytics Institute')">Insight Analytics Institute</button>
+        </div>
+    </section>
+
+    <section class="details" id="details">
+        <h2>Institute Details</h2>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Data Analyst Institutes Portal, Nagpur. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

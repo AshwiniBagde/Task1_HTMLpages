@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Services Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #54c7e7;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .trains, .details {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .train-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .train-list button {
+            background-color: #eaff00;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .details {
+            display: none;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #00d9ff;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showDetails(train) {
+            let details = {
+                "Rajdhani Express": "<h2>Rajdhani Express</h2><p><strong>Route:</strong> Mumbai ✈ Delhi</p><p><strong>Journey Time:</strong> 16h 30m</p><p><strong>Sleeper:</strong> ₹800 (50 tickets available)</p><p><strong>2-Tier:</strong> ₹2200 (30 tickets available)</p><p><strong>3-Tier:</strong> ₹1500 (40 tickets available)</p>",
+                "Shatabdi Express": "<h2>Shatabdi Express</h2><p><strong>Route:</strong> Bangalore ✈ Chennai</p><p><strong>Journey Time:</strong> 5h 15m</p><p><strong>Sleeper:</strong> ₹600 (70 tickets available)</p><p><strong>2-Tier:</strong> ₹1800 (20 tickets available)</p><p><strong>3-Tier:</strong> ₹1200 (30 tickets available)</p>",
+                "Duronto Express": "<h2>Duronto Express</h2><p><strong>Route:</strong> Kolkata ✈ Mumbai</p><p><strong>Journey Time:</strong> 24h 45m</p><p><strong>Sleeper:</strong> ₹900 (60 tickets available)</p><p><strong>2-Tier:</strong> ₹2500 (25 tickets available)</p><p><strong>3-Tier:</strong> ₹1800 (35 tickets available)</p>",
+                "Garib Rath Express": "<h2>Garib Rath Express</h2><p><strong>Route:</strong> Hyderabad ✈ Visakhapatnam</p><p><strong>Journey Time:</strong> 12h 10m</p><p><strong>Sleeper:</strong> ₹500 (80 tickets available)</p><p><strong>2-Tier:</strong> ₹1500 (40 tickets available)</p><p><strong>3-Tier:</strong> ₹1000 (50 tickets available)</p>",
+                "Jan Shatabdi Express": "<h2>Jan Shatabdi Express</h2><p><strong>Route:</strong> Pune ✈ Goa</p><p><strong>Journey Time:</strong> 8h 30m</p><p><strong>Sleeper:</strong> ₹400 (90 tickets available)</p><p><strong>2-Tier:</strong> ₹1200 (35 tickets available)</p><p><strong>3-Tier:</strong> ₹800 (45 tickets available)</p>",
+                "Vande Bharat Express": "<h2>Vande Bharat Express</h2><p><strong>Route:</strong> Delhi ✈ Varanasi</p><p><strong>Journey Time:</strong> 8h 0m</p><p><strong>Sleeper:</strong> ₹1000 (60 tickets available)</p><p><strong>2-Tier:</strong> ₹3000 (20 tickets available)</p><p><strong>3-Tier:</strong> ₹2000 (30 tickets available)</p>"
+            };
+
+            document.getElementById("details").innerHTML = details[train];
+            document.getElementById("details").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Indian Railways</h1>
+        <p>Explore trains, fares, and availability for your journey!</p>
+    </header>
+
+    <section class="trains">
+        <h2>Select a Train</h2>
+        <div class="train-list">
+            <button onclick="showDetails('Rajdhani Express')">Rajdhani Express</button>
+            <button onclick="showDetails('Shatabdi Express')">Shatabdi Express</button>
+            <button onclick="showDetails('Duronto Express')">Duronto Express</button>
+        </div>
+    </section>
+
+    <section class="details" id="details">
+        <h2>Train Details</h2>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Railway Services Hub. Safe Journey!</p>
+    </footer>
+
+</body>
+</html>

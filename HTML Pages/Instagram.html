@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff4081;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .login {
+            margin: 50px auto;
+            padding: 20px;
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login button {
+            background-color: #ff4081;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .profile, .reels, .photos {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .bio {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .reels video {
+            width: 80%;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .photos img {
+            width: 80%;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .like, .comment {
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .like {
+            background-color: red;
+            color: white;
+        }
+
+        .comment {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Instagram Clone</h1>
+    </header>
+
+    <section class="login">
+        <h2>Login</h2>
+        <input type="email" placeholder="Enter Email">
+        <input type="password" placeholder="Enter Password">
+        <button onclick="showProfile()">Log In</button>
+    </section>
+
+    <section class="profile" id="profile" style="display: none;">
+        <h2>Welcome to Your Profile</h2>
+        <img src="profile-pic.jpg" alt="Profile Picture">
+        <p class="bio">Food lover | Travel enthusiast | Photographer 📸</p>
+    </section>
+
+    <section class="reels" id="reels" style="display: none;">
+        <h2>Reels Section</h2>
+        <video width="400" controls>
+            <source src="reel1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>🔥 Trending Reels</p>
+        <button>Send Reel</button>
+    </section>
+
+    <section class="photos" id="photos" style="display: none;">
+        <h2>Photo Gallery</h2>
+        <img src="photo1.jpg" alt="Post Image">
+        <p>🍕 Best Pizza Ever! #foodlover</p>
+        <div class="buttons">
+            <button class="like">❤️ Like</button>
+            <button class="comment">💬 Comment</button>
+        </div>
+    </section>
+
+    <script>
+        function showProfile() {
+            document.getElementById("profile").style.display = "block";
+            document.getElementById("reels").style.display = "block";
+            document.getElementById("photos").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

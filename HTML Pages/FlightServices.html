@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0077b5;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .flights {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flight-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px auto;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+
+        .flight-details {
+            flex: 1;
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        .fares {
+            color: green;
+            font-size: 16px;
+        }
+
+        .refreshments {
+            color: #ff9800;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #0077b5;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Flight Services - Book Your Journey</h1>
+    </header>
+
+    <section class="flights">
+        <h2>Available Flights</h2>
+
+        <div class="flight-item">
+            <div class="flight-details">
+                <h3>Air India - AI102</h3>
+                <p>Business Class: ₹50,000 | Economy Class: ₹15,000</p>
+                <p class="refreshments">Complimentary: Snacks, Beverages, WiFi</p>
+                <p>Journey: New Delhi ✈️ Mumbai</p>
+                <p>Total Time: 2h 10m</p>
+            </div>
+        </div>
+
+        <div class="flight-item">
+            <div class="flight-details">
+                <h3>IndiGo - 6E501</h3>
+                <p>Business Class: ₹35,000 | Economy Class: ₹12,000</p>
+                <p class="refreshments">Complimentary: Soft Drinks, Sandwiches</p>
+                <p>Journey: Bangalore ✈️ Kolkata</p>
+                <p>Total Time: 2h 50m</p>
+            </div>
+        </div>
+
+        <div class="flight-item">
+            <div class="flight-details">
+                <h3>SpiceJet - SG204</h3>
+                <p>Business Class: ₹40,000 | Economy Class: ₹14,500</p>
+                <p class="refreshments">Complimentary: Tea, Coffee, Cookies</p>
+                <p>Journey: Chennai ✈️ Hyderabad</p>
+                <p>Total Time: 1h 45m</p>
+            </div>
+        </div>
+
+        <div class="flight-item">
+            <div class="flight-details">
+                <h3>Vistara - UK301</h3>
+                <p>Business Class: ₹60,000 | Economy Class: ₹20,000</p>
+                <p class="refreshments">Complimentary: Gourmet Meals, Premium Drinks</p>
+                <p>Journey: Delhi ✈️ Dubai</p>
+                <p>Total Time: 3h 30m</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Flight Services. Safe Travels!</p>
+    </footer>
+
+</body>
+</html>

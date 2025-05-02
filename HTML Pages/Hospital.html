@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .hospital-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .info {
+            padding: 20px;
+        }
+        .info h1 {
+            margin: 0;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        .buttons button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        .photos {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 20px;
+        }
+        .photos img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .about, .directions {
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Keshav Hospital</h1>
+    </header>
+    <img src="hospital.jpg" alt="Hospital Image" class="hospital-image">
+    <div class="info">
+        <h1>Address</h1>
+        <p>123 Manewada Road Nagpur, Maharashtra</p>
+        <h2>Ratings: ★★★★☆</h2>
+        <h2>Phone: (123) 456-7890</h2>
+        <h2>Opening Hours: 8:00 AM - 10:00 PM</h2>
+        <div class="buttons">
+            <button>Get Directions</button>
+            <button>Save</button>
+            <button>Share</button>
+        </div>
+    </div>
+    <div class="photos">
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+        <img src="photo3.jpg" alt="Photo 3">
+    </div>
+    <div class="about">
+        <h2>About</h2>
+        <p>This hospital is known for its excellent medical services and patient care. It offers a wide range of treatments and facilities to ensure the best healthcare experience.</p>
+    </div>
+    <footer>
+        <p>&copy; 2023 Hospital Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

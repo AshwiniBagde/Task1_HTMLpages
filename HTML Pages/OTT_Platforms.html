@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTT Streaming Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .platforms, .details {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .platform-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .platform-list button {
+            background-color: #222;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .details {
+            display: none;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showDetails(platform) {
+            let details = {
+                "Netflix": "<h2>Netflix</h2><p><strong>New Series:</strong> The Night Agent, Avatar: The Last Airbender</p><p><strong>Trending Series:</strong> Stranger Things (IMDb 8.7), Money Heist (IMDb 8.2)</p><p><strong>Saved Series:</strong> The Witcher, Dark</p><p><strong>Top 10 Movies & Series:</strong> Extraction 2, Squid Game, Wednesday, Narcos, Black Mirror</p>",
+                "Amazon Prime Video": "<h2>Amazon Prime Video</h2><p><strong>New Series:</strong> Citadel, Fallout</p><p><strong>Trending Series:</strong> The Boys (IMDb 8.6), Jack Ryan (IMDb 8.1)</p><p><strong>Saved Series:</strong> Reacher, The Expanse</p><p><strong>Top 10 Movies & Series:</strong> Mirzapur, The Tomorrow War, The Grand Tour, Invincible, Rings of Power</p>",
+                "Disney+ Hotstar": "<h2>Disney+ Hotstar</h2><p><strong>New Series:</strong> Loki Season 2, Ahsoka</p><p><strong>Trending Series:</strong> Game of Thrones (IMDb 9.2), Special Ops (IMDb 8.3)</p><p><strong>Saved Series:</strong> Criminal Justice, The Mandalorian</p><p><strong>Top 10 Movies & Series:</strong> Avengers Endgame, Ms. Marvel, WandaVision, The Lion King, Thor: Love and Thunder</p>",
+                "Zee5": "<h2>Zee5</h2><p><strong>New Series:</strong> Taj: Divided by Blood, Sunflower Season 2</p><p><strong>Trending Series:</strong> Rangbaaz (IMDb 7.5), Abhay (IMDb 7.7)</p><p><strong>Saved Series:</strong> Code M, State of Siege</p><p><strong>Top 10 Movies & Series:</strong> The Kashmir Files, Khaali Peeli, Mithya, Pareeksha, Forbidden Love</p>",
+                "SonyLIV": "<h2>SonyLIV</h2><p><strong>New Series:</strong> Scam 2003, Rocket Boys Season 2</p><p><strong>Trending Series:</strong> Scam 1992 (IMDb 9.2), Maharani (IMDb 8.0)</p><p><strong>Saved Series:</strong> Gullak, Undekhi</p><p><strong>Top 10 Movies & Series:</strong> Scam 1992, JL50, Your Honor, Tanaav, Maharani</p>"
+            };
+
+            document.getElementById("details").innerHTML = details[platform];
+            document.getElementById("details").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>OTT Streaming Hub</h1>
+        <p>Select a platform to explore the latest shows and trends!</p>
+    </header>
+
+    <section class="platforms">
+        <h2>Choose a Platform</h2>
+        <div class="platform-list">
+            <button onclick="showDetails('Netflix')">Netflix</button>
+            <button onclick="showDetails('Amazon Prime Video')">Amazon Prime Video</button>
+            <button onclick="showDetails('Disney+ Hotstar')">Disney+ Hotstar</button>
+            <button onclick="showDetails('Zee5')">Zee5</button>
+            <button onclick="showDetails('SonyLIV')">SonyLIV</button>
+        </div>
+    </section>
+
+    <section class="details" id="details">
+        <h2>Platform Details</h2>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 OTT Streaming Hub. Happy Watching!</p>
+    </footer>
+
+</body>
+</html>
